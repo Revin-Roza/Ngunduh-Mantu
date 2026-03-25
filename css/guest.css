@@ -1,105 +1,68 @@
+/* =======================================================================
+   [1] IMPORT & SCROLLBAR CONTROL
+   ======================================================================= */
 @import url("common.css");
 @import url("animation.css");
 
+/* Sembunyikan scrollbar bawaan agar tampilan clean */
 html {
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
 }
+html::-webkit-scrollbar { display: none; }
 
 .with-scrollbar {
     scrollbar-width: auto !important;
     -ms-overflow-style: auto !important;
 }
+.with-scrollbar::-webkit-scrollbar { display: block; width: 5px; }
 
-
-.font-esthetic{
-font-family:'Great Vibes', cursive;
+/* =======================================================================
+   [2] TYPOGRAPHY SYSTEM (LUXURY CONSISTENCY)
+   ======================================================================= */
+/* Gaya Tulisan Tangan/Estetik */
+.font-esthetic {
+    font-family: 'Great Vibes', cursive !important;
+    color: var(--pria-gold);
 }
 
-.section-title{
-font-family:'Playfair Display', serif;
-font-weight:600;
-letter-spacing:1px;
+/* Judul Section & Nama Mempelai */
+.section-title, .nama-mempelai, h2, .gallery-caption {
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-body{
-font-family:'Poppins', sans-serif;
-font-weight:300;
-line-height:1.8;
+/* Angka Countdown */
+.countdown-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--pria-gold);
 }
 
-.countdown-number{
-font-family:'Playfair Display', serif;
-font-size:2rem;
-font-weight:600;
+/* Teks Utama & Navigasi */
+body, p, .parent-name, button, .nav-link, footer {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 300;
+    line-height: 1.8;
 }
-
-.parent-name{
-font-family:'Poppins', sans-serif;
-font-weight:300;
-}
-
-button{
-font-family:'Poppins', sans-serif;
-font-weight:500;
-letter-spacing:1px;
-}
-
-.nav-link{
-font-family:'Poppins', sans-serif;
-font-weight:400;
-letter-spacing:1px;
-}
-
-.gallery-caption{
-font-family:'Playfair Display', serif;
-font-style:italic;
-}
-
-footer{
-font-family:'Poppins', sans-serif;
-font-weight:300;
-font-size:0.9rem;
-}
-
-
-
 
 .font-arabic {
     font-family: 'Noto Naskh Arabic', serif !important;
+    font-size: 1.5rem;
+    line-height: 2.5;
 }
 
-/*Nama Mempelai */
-.nama-mempelai {
-    font-family: "Playfair Display", serif;
-}
-
-/* Judul Section */
-h2 {
-    font-family: "Cormorant Garamond", serif;
-}
-
-/* teks umum */
-body, p {
-    font-family: "lato", sans-serif;
-}
-
+/* =======================================================================
+   [3] IMAGE & LOADING COMPONENTS
+   ======================================================================= */
 .img-center-crop {
     width: 13rem;
     height: 13rem;
-    max-width: 100%;
-    max-height: 100%;
     object-fit: cover;
-}
-
-html[data-bs-theme="dark"] .btn-transparent {
-    background-color: rgba(var(--bs-dark-rgb), 0.5) !important;
-    backdrop-filter: blur(0.5rem);
-}
-
-html[data-bs-theme="light"] .btn-transparent {
-    background-color: rgba(var(--bs-light-rgb), 0.5) !important;
-    backdrop-filter: blur(0.5rem);
+    border-radius: 50%;
+    border: 3px solid var(--pria-gold-soft);
 }
 
 .loading-page {
@@ -108,73 +71,49 @@ html[data-bs-theme="light"] .btn-transparent {
     width: 100%;
     height: 100%;
     z-index: 1056;
-}
-
-html[data-bs-theme="light"] .color-theme-svg {
-    color: rgb(255, 255, 255);
-    background-color: var(--bs-light);
-}
-
-html[data-bs-theme="dark"] .color-theme-svg {
-    color: rgb(0, 0, 0);
-    background-color: var(--bs-dark);
-}
-
-html[data-bs-theme="light"] .bg-light-dark {
-    background-color: rgb(var(--bs-light-rgb));
-}
-
-html[data-bs-theme="dark"] .bg-light-dark {
-    background-color: rgb(var(--bs-dark-rgb));
-}
-
-html[data-bs-theme="light"] .bg-white-black {
-    background-color: rgb(var(--bs-white-rgb));
-}
-
-html[data-bs-theme="dark"] .bg-white-black {
-    background-color: rgb(var(--bs-black-rgb));
+    background: var(--pria-bg-dark);
 }
 
 .bg-cover-home {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    mask-image: linear-gradient(0.5turn, transparent, black 40%, black 60%, transparent);
+    /* Masking yang lebih halus untuk transisi foto */
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
 }
 
-.width-loading {
-    width: 25%;
+/* =======================================================================
+   [4] THEME ADAPTATION (GLASSMORPHISM)
+   ======================================================================= */
+.btn-transparent {
+    backdrop-filter: blur(0.6rem);
+    -webkit-backdrop-filter: blur(0.6rem);
+    transition: all 0.3s ease;
 }
 
-.cursor-pointer {
-    cursor: pointer;
+html[data-bs-theme="dark"] .btn-transparent {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media screen and (max-width: 992px) {
-    .width-loading {
-        width: 50%;
-    }
+html[data-bs-theme="light"] .btn-transparent {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 576px) {
-    .width-loading {
-        width: 75%;
-    }
-}
+/* =======================================================================
+   [5] UTILITIES & RESPONSIVE
+   ======================================================================= */
+.cursor-pointer { cursor: pointer; }
+
+.width-loading { width: 75%; max-width: 300px; }
+
+@media screen and (min-width: 992px) { .width-loading { width: 25%; } }
 
 svg {
     display: block;
-    line-height: 0;
     shape-rendering: geometricPrecision;
-    backface-visibility: hidden;
 }
 
-.svg-wrapper {
-    overflow: hidden !important;
-    transform: translateZ(0) !important;
-}
-
-.no-gap-bottom {
-    margin-bottom: -0.75rem !important;
-}
+.no-gap-bottom { margin-bottom: -1px !important; }
