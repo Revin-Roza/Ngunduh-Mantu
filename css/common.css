@@ -111,22 +111,3 @@ hr {
     opacity: 0.2;
 }
 
-    #navbar-menu .nav-link {
-        color: rgba(255, 255, 255, 0.6) !important;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Efek saat menu aktif atau ditekan */
-    #navbar-menu .nav-link:hover, 
-    #navbar-menu .nav-link.active {
-        color: var(--gold-primary) !important;
-        transform: translateY(-3px);
-    }
-
-    /* Memastikan tidak ada tabrakan dengan fixed-bottom */
-    body {
-        padding-bottom: 80px; /* Memberi ruang agar konten terakhir tidak tertutup navbar */
-    }
