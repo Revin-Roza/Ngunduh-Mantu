@@ -563,20 +563,33 @@
 </div>
 
                 <!-- Gallery -->
-<section class="pb-5 pt-3" id="gallery" style="background-color: #0c0c0c;">
-    <div class="container">
-        <div class="border rounded-5 shadow-lg p-3" style="border-color: rgba(197, 160, 89, 0.3) !important; background-color: rgba(255,255,255,0.02);">
+<section class="py-5 overflow-hidden" id="gallery" style="background-color: var(--navy-deep);">
+    <div class="container px-4">
+        <div class="rounded-5 shadow-lg p-4" 
+             style="border: 1px solid rgba(197, 160, 89, 0.2); 
+                    background: rgba(255, 255, 255, 0.02); 
+                    backdrop-filter: blur(10px);">
 
-            <h2 class="font-esthetic text-center py-2 m-0" style="font-size: 2.25rem; color: #c5a059;">Galeri</h2>
+            <div data-aos="fade-down">
+                <h2 class="font-esthetic text-center py-2 m-0" 
+                    style="font-size: 3rem; color: var(--gold-primary); text-shadow: 2px 4px 8px rgba(0,0,0,0.5);">
+                    Galeri
+                </h2>
+                <div class="d-flex align-items-center justify-content-center gap-2 mb-4">
+                    <div style="height: 1px; width: 50px; background: linear-gradient(to right, transparent, var(--gold-primary));"></div>
+                    <i class="fa-solid fa-camera-retro opacity-50" style="color: var(--gold-primary); font-size: 0.8rem;"></i>
+                    <div style="height: 1px; width: 50px; background: linear-gradient(to left, transparent, var(--gold-primary));"></div>
+                </div>
+            </div>
 
-            <div id="carousel-image-one" class="carousel slide mt-4" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel-image-one" data-bs-slide-to="0" class="active" style="width: 10px; height: 10px; border-radius: 50%; background-color: #c5a059;"></button>
-                    <button type="button" data-bs-target="#carousel-image-one" data-bs-slide-to="1" style="width: 10px; height: 10px; border-radius: 50%; background-color: #c5a059;"></button>
-                    <button type="button" data-bs-target="#carousel-image-one" data-bs-slide-to="2" style="width: 10px; height: 10px; border-radius: 50%; background-color: #c5a059;"></button>
+            <div id="carousel-image-one" class="carousel slide mt-2" data-bs-ride="carousel" data-aos="zoom-in">
+                <div class="carousel-indicators mb-2">
+                    <button type="button" data-bs-target="#carousel-image-one" data-bs-slide-to="0" class="active" style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--gold-primary);"></button>
+                    <button type="button" data-bs-target="#carousel-image-one" data-bs-slide-to="1" style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--gold-primary);"></button>
+                    <button type="button" data-bs-target="#carousel-image-one" data-bs-slide-to="2" style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--gold-primary);"></button>
                 </div>
 
-                <div class="carousel-inner rounded-4 shadow" style="aspect-ratio: 16/9; background-color: #000;">
+                <div class="carousel-inner rounded-4 shadow-lg" style="aspect-ratio: 16/9; background-color: #000; border: 1px solid rgba(255,255,255,0.05);">
                     <div class="carousel-item active" style="height: 100%;">
                         <img src="./assets/images/Gallery1_rr.webp" class="d-block w-100 h-100" style="object-fit: cover; cursor: pointer;" onclick="undangan.guest.modal(this)" alt="Gallery 1">
                     </div>
@@ -589,21 +602,21 @@
                 </div>
 
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel-image-one" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg);"></span>
+                    <span class="carousel-control-prev-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(15deg) brightness(1.2);"></span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carousel-image-one" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg);"></span>
+                    <span class="carousel-control-next-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(15deg) brightness(1.2);"></span>
                 </button>
             </div>
 
-            <div id="carousel-image-two" class="carousel slide mt-4" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel-image-two" data-bs-slide-to="0" class="active" style="width: 10px; height: 10px; border-radius: 50%; background-color: #c5a059;"></button>
-                    <button type="button" data-bs-target="#carousel-image-two" data-bs-slide-to="1" style="width: 10px; height: 10px; border-radius: 50%; background-color: #c5a059;"></button>
-                    <button type="button" data-bs-target="#carousel-image-two" data-bs-slide-to="2" style="width: 10px; height: 10px; border-radius: 50%; background-color: #c5a059;"></button>
+            <div id="carousel-image-two" class="carousel slide mt-4" data-bs-ride="carousel" data-aos="zoom-in" data-aos-delay="200">
+                <div class="carousel-indicators mb-2">
+                    <button type="button" data-bs-target="#carousel-image-two" data-bs-slide-to="0" class="active" style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--gold-primary);"></button>
+                    <button type="button" data-bs-target="#carousel-image-two" data-bs-slide-to="1" style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--gold-primary);"></button>
+                    <button type="button" data-bs-target="#carousel-image-two" data-bs-slide-to="2" style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--gold-primary);"></button>
                 </div>
 
-                <div class="carousel-inner rounded-4 shadow" style="aspect-ratio: 16/9; background-color: #000;">
+                <div class="carousel-inner rounded-4 shadow-lg" style="aspect-ratio: 16/9; background-color: #000; border: 1px solid rgba(255,255,255,0.05);">
                     <div class="carousel-item active" style="height: 100%;">
                         <img src="./assets/images/Gallery4_rr.webp" class="d-block w-100 h-100" style="object-fit: cover; cursor: pointer;" onclick="undangan.guest.modal(this)" alt="Gallery 4">
                     </div>
@@ -616,10 +629,10 @@
                 </div>
 
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel-image-two" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg);"></span>
+                    <span class="carousel-control-prev-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(15deg) brightness(1.2);"></span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carousel-image-two" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg);"></span>
+                    <span class="carousel-control-next-icon" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(15deg) brightness(1.2);"></span>
                 </button>
             </div>
 
