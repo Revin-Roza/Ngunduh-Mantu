@@ -6,137 +6,153 @@
     --navy-light: #16212e;       
     --gold-primary: #c5a059;     
     --gold-soft: rgba(197, 160, 89, 0.15);
-    --gold-glow: 0 0 20px rgba(197, 160, 89, 0.25);
+    --gold-glow: 0 10px 30px rgba(197, 160, 89, 0.2);
     
-    /* Text Colors - Ditingkatkan kontrasnya agar lebih tegas */
+    /* Text Colors */
     --text-pure: #ffffff;
     --text-glass: rgba(255, 255, 255, 0.9); 
-    --text-muted: rgba(255, 255, 255, 0.7);
+    --text-muted: rgba(255, 255, 255, 0.6);
 }
 
-/* Reset Dasar */
+/* Base Reset & Smooth Scroll */
+html { scroll-behavior: smooth; }
+
 body {
     background-color: var(--navy-deep);
     color: var(--text-pure);
-    /* Menggunakan Plus Jakarta Sans: Lebih tegas & modern */
     font-family: 'Plus Jakarta Sans', sans-serif !important; 
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    line-height: 1.6;
 }
 
-/* MENGHILANGKAN KOTAK DI BELAKANG TEKS SECARA TOTAL */
-p, span, h1, h2, h3, h4, h5, h6, label {
+/* Force Transparent Backgrounds */
+p, span, h1, h2, h3, h4, h5, h6, label, .container {
     background-color: transparent !important; 
     background: transparent !important;
-    margin: 0;
 }
 
 /* =======================================================================
-   [2] TYPOGRAPHY SYSTEM (TEGAS & AESTHETIC)
+   [2] TYPOGRAPHY SYSTEM (LUXURY FEEL)
    ======================================================================= */
 .font-esthetic {
     font-family: "Playfair Display", serif !important;
-    font-weight: 700 !important; /* Ditingkatkan ke 700 agar lebih tegas */
+    font-weight: 700 !important;
     font-style: italic;
-    letter-spacing: 0.5px;
     color: var(--gold-primary) !important;
-    /* Shadow diperkuat agar teks "lepas" dari background */
-    text-shadow: 2px 4px 10px rgba(0,0,0,0.6);
+    text-shadow: 2px 4px 15px rgba(0,0,0,0.4);
+    letter-spacing: 0.5px;
 }
 
-/* Styling teks isi agar lebih solid */
-p, .fw-light { 
-    font-weight: 400 !important; 
-    color: var(--text-muted);
+/* Custom Selection Color */
+::selection {
+    background: var(--gold-primary);
+    color: var(--navy-deep);
 }
-
-.fw-bold, h2, h3 { 
-    font-weight: 700 !important; 
-    letter-spacing: -0.01em; 
-}
-
-.fw-medium { font-weight: 600 !important; }
 
 /* =======================================================================
-   [3] GLASSMORPHISM (TRANSPARAN PREMIUM)
+   [3] ENHANCED GLASSMORPHISM
    ======================================================================= */
-.glass-card {
+.glass-card, .agenda-card, .gift-card {
     background: rgba(255, 255, 255, 0.03) !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(197, 160, 89, 0.12);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(197, 160, 89, 0.15) !important;
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Kartu Agenda & Gift */
-.gift-card, .agenda-card {
-    background: rgba(255, 255, 255, 0.02) !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--gold-soft) !important;
-    border-radius: 18px;
-    padding: 25px;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.gift-card:hover, .agenda-card:hover {
+.agenda-card:hover, .gift-card:hover {
+    transform: translateY(-10px) scale(1.01);
     border-color: var(--gold-primary) !important;
-    transform: translateY(-8px);
+    box-shadow: var(--gold-glow) !important;
     background: rgba(255, 255, 255, 0.05) !important;
-    box-shadow: var(--gold-glow);
 }
 
 /* =======================================================================
-   [4] BUTTONS & INTERACTION
+   [4] BUTTONS & FORM INPUTS (INTERACTIVE)
    ======================================================================= */
 .btn-premium {
-    background: transparent;
-    color: var(--gold-primary);
-    border: 1px solid var(--gold-primary);
+    background: linear-gradient(135deg, #d4b375 0%, #c5a059 100%);
+    color: #111 !important;
+    border: none;
     border-radius: 50px;
-    padding: 12px 28px;
+    padding: 14px 32px;
     font-size: 0.85rem;
-    font-weight: 700; /* Teks tombol lebih tebal */
-    letter-spacing: 1.5px;
+    font-weight: 800;
+    letter-spacing: 2px;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
 }
 
 .btn-premium:hover {
-    background: var(--gold-primary);
-    color: var(--navy-deep);
-    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(197, 160, 89, 0.5);
+    filter: brightness(1.1);
 }
 
-/* Input Form RSVP */
-.rsvp-input {
-    background: rgba(255, 255, 255, 0.04) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #fff !important;
-    font-weight: 500;
-    border-radius: 12px;
-    padding: 14px;
+/* Custom Style untuk Input Form */
+.form-control, .form-select {
+    background: rgba(10, 17, 24, 0.6) !important;
+    border: 1px solid rgba(197, 160, 89, 0.2) !important;
+    color: white !important;
+    border-radius: 12px !important;
+    padding: 12px 18px !important;
+    transition: all 0.3s ease !important;
 }
 
-.rsvp-input:focus {
+.form-control:focus, .form-select:focus {
     border-color: var(--gold-primary) !important;
-    background: rgba(255, 255, 255, 0.08) !important;
-    box-shadow: none !important;
+    box-shadow: 0 0 10px rgba(197, 160, 89, 0.2) !important;
+    background: rgba(10, 17, 24, 0.8) !important;
 }
 
 /* =======================================================================
-   [5] UTILITIES
+   [5] SPECIAL EFFECTS (LIVELY FEATURES)
    ======================================================================= */
-.hide-scrollbar::-webkit-scrollbar { display: none; }
-.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Pulse Ring Foto Profil */
-.pulse-gold {
-    animation: pulse-border 2.5s infinite;
+/* Efek Kilau Emas pada Teks */
+.text-gold-shimmer {
+    background: linear-gradient(to right, #c5a059 20%, #f1d59f 40%, #f1d59f 60%, #c5a059 80%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
 }
 
-@keyframes pulse-border {
-    0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.3); }
-    70% { box-shadow: 0 0 0 12px rgba(197, 160, 89, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+/* Custom Scrollbar Premium */
+.with-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+.with-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+.with-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--gold-primary);
+    border-radius: 10px;
+}
+
+/* Pulse Glow untuk Ikon atau Foto */
+.pulse-gold {
+    animation: pulse-gold 2s infinite;
+}
+
+@keyframes pulse-gold {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.5); }
+    70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(197, 160, 89, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+}
+
+/* Loading Bar Countdown */
+.progress-bar {
+    background: linear-gradient(to right, #c5a059, #f1d59f) !important;
+    border-radius: 10px;
 }
