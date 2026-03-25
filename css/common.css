@@ -1,115 +1,112 @@
 /* =======================================================================
-   [1] CONFIGURATION & VARIABLES
+   [1] CONFIGURATION & VARIABLES (REVIN & ROZA CONCEPT)
    ======================================================================= */
 :root {
-    --pria-bg-dark: #0f1720;
-    --pria-bg-card: #16212e;
-    --pria-gold: #c5a059;
-    --pria-gold-soft: rgba(197, 160, 89, 0.2);
+    --pria-bg-dark: #0a1118;        /* Navy Lebih Deep */
+    --pria-bg-card: #16212e;        /* Navy untuk dimensi */
+    --pria-gold: #c5a059;           /* Emas Signature */
+    --pria-gold-soft: rgba(197, 160, 89, 0.15);
     --pria-text-main: #ffffff;
     --pria-text-muted: rgba(255, 255, 255, 0.65);
+    --pria-glass: rgba(255, 255, 255, 0.03);
 }
 
 html {
     scroll-behavior: smooth !important;
-    width: 100% !important; /* Diubah dari 100vw agar tidak bug horizontal */
+    width: 100% !important;
     overflow-x: hidden;
 }
 
 body {
-    font-family: 'Josefin Sans', sans-serif !important;
+    font-family: 'Inter', sans-serif !important; /* Diselaraskan dengan style utama agar rapi */
     padding: 0 !important;
     width: 100% !important;
     overflow-x: hidden !important;
-    background-color: var(--pria-bg-dark); /* Dasar warna tema pria */
+    background-color: var(--pria-bg-dark);
     color: var(--pria-text-main);
+    line-height: 1.6;
 }
 
 /* =======================================================================
-   [2] GLOBAL ELEMENT STYLES
+   [2] CLEANUP & FIX (MENGHAPUS BENTROK)
    ======================================================================= */
-i {
-    width: auto !important;
+
+/* Menghapus background default pada teks agar tidak ada kotak warna */
+p, span, h1, h2, h3, h4, h5, h6 {
+    background-color: transparent !important;
 }
 
-/* Transisi hanya untuk elemen tema agar ringan saat auto-scroll */
-.text-theme-auto, .bg-theme-auto, .navbar, .btn-outline-auto {
-    will-change: background-color, color;
-    transition: background-color 350ms ease, color 350ms ease;
+/* Fix FontAwesome agar icon tetap tampil meski font global berubah */
+.fa, .fas, .far, .fab, .fa-solid {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900;
 }
 
-svg > path {
-    will-change: color;
-    transition: color 350ms ease;
+/* Transisi Halus */
+.text-theme-auto, .bg-theme-auto, .navbar, .btn-premium {
+    transition: all 400ms cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* =======================================================================
-   [3] BOOTSTRAP THEME ADAPTATION (NAVBAR & UI)
+   [3] PREMIUM UI COMPONENTS (CONSISTENT CONCEPT)
    ======================================================================= */
-/* Navbar Glassmorphism */
-html[data-bs-theme="dark"] .navbar {
-    background-color: rgba(var(--bs-dark-rgb), 0.75) !important;
-    backdrop-filter: blur(0.5rem);
+
+/* Navbar Glassmorphism - Selalu Dark & Elegant */
+.navbar {
+    background-color: rgba(10, 17, 24, 0.8) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.1);
 }
 
-html[data-bs-theme="light"] .navbar {
-    background-color: rgba(var(--bs-light-rgb), 0.75) !important;
-    backdrop-filter: blur(0.5rem);
+.nav-link {
+    color: var(--pria-text-muted) !important;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
-/* Theme Auto Text */
-html[data-bs-theme="dark"] .text-theme-auto { color: rgb(var(--bs-light-rgb)); }
-html[data-bs-theme="light"] .text-theme-auto { color: rgb(var(--bs-dark-rgb)); }
-
-/* Nav Links */
-html[data-bs-theme="dark"] .nav-link { color: rgba(var(--bs-white-rgb), 0.5); }
-html[data-bs-theme="light"] .nav-link { color: rgba(var(--bs-black-rgb), 0.5); }
-
-/* Background Auto */
-html[data-bs-theme="dark"] .bg-theme-auto { background-color: var(--bs-gray-800); }
-html[data-bs-theme="light"] .bg-theme-auto { background-color: var(--bs-gray-100); }
-
-/* =======================================================================
-   [4] BUTTON CUSTOMIZATION (AUTO-THEME)
-   ======================================================================= */
-html[data-bs-theme="dark"] .btn-outline-auto {
-    --bs-btn-color: var(--bs-light);
-    --bs-btn-border-color: var(--bs-light);
-    --bs-btn-hover-color: var(--bs-black);
-    --bs-btn-hover-bg: var(--bs-light);
-    --bs-btn-hover-border-color: var(--bs-light);
+.nav-link:hover, .nav-link.active {
+    color: var(--pria-gold) !important;
 }
 
-html[data-bs-theme="light"] .btn-outline-auto {
-    --bs-btn-color: var(--bs-dark);
-    --bs-btn-border-color: var(--bs-dark);
-    --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: var(--bs-dark);
-    --bs-btn-hover-border-color: var(--bs-dark);
+/* Background Auto - Diarahkan ke Glass Style */
+.bg-theme-auto { 
+    background-color: var(--pria-glass) !important; 
+    backdrop-filter: blur(10px);
+}
+
+/* Overlay Video & Story */
+.bg-overlay-auto {
+    background-color: rgba(10, 17, 24, 0.7);
+    backdrop-filter: blur(8px);
 }
 
 /* =======================================================================
-   [5] OVERLAYS & HOVER EFFECTS
+   [4] CUSTOM UTILITIES
    ======================================================================= */
-html[data-bs-theme="dark"] .bg-overlay-auto {
-    background-color: rgba(var(--bs-black-rgb), 0.5);
-    backdrop-filter: blur(0.25rem);
-}
 
-html[data-bs-theme="light"] .bg-overlay-auto {
-    background-color: rgba(var(--bs-white-rgb), 0.5);
-    backdrop-filter: blur(0.25rem);
+/* Utilitas Sembunyikan Scrollbar (Highlight) */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none !important;
 }
-
-.hover-area {
-    display: none;
-    cursor: pointer;
-}
-
-.hover-wrapper:hover .hover-area {
-    display: flex;
+.hide-scrollbar {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
 }
 
 .gif-image {
     max-height: 10rem;
+    object-fit: contain;
+}
+
+/* Efek Hover Area */
+.hover-wrapper:hover .hover-area {
+    display: flex !important;
+    opacity: 1;
+}
+
+/* Garis Pembatas (HR) Mewah */
+hr {
+    border-color: var(--pria-gold-soft);
+    opacity: 0.2;
 }
