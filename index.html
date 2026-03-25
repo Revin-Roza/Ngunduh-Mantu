@@ -945,49 +945,50 @@
 
             </main>
 
-        <nav class="navbar navbar-expand fixed-bottom p-0 mb-3 mx-3 shadow-lg" 
+   <nav class="navbar navbar-expand fixed-bottom p-0 mb-3 mx-3 shadow-lg" 
      id="navbar-menu" 
      style="
         z-index: 9999; 
-        background: rgba(5, 8, 11, 0.75); /* Navy Deep Transparan */
+        background: rgba(5, 8, 11, 0.8); /* Navy Transparan */
         backdrop-filter: blur(15px); 
         -webkit-backdrop-filter: blur(15px);
         border: 1px solid rgba(197, 160, 89, 0.3); /* Border Emas Tipis */
-        border-radius: 25px; /* Membuatnya melayang melengkung */
+        border-radius: 20px; 
         max-width: 500px; 
         margin-left: auto !important; 
         margin-right: auto !important;
+        height: 65px;
      ">
     
-    <ul class="navbar-nav nav-justified w-100 align-items-center py-2">
+    <ul class="navbar-nav nav-justified w-100 align-items-center h-100">
         <li class="nav-item">
-            <a class="nav-link text-light opacity-75" href="#home" style="transition: all 0.3s ease;">
-                <i class="fa-solid fa-house-chimney mb-1" style="font-size: 1.1rem;"></i>
-                <span class="d-block fw-bold" style="font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase;">Home</span>
+            <a class="nav-link py-1" href="#home" style="transition: all 0.3s ease;">
+                <i class="fa-solid fa-house-chimney d-block mb-1" style="font-size: 1.1rem;"></i>
+                <span style="font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Home</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-light opacity-75" href="#bride" style="transition: all 0.3s ease;">
-                <i class="fa-solid fa-heart mb-1" style="font-size: 1.1rem;"></i>
-                <span class="d-block fw-bold" style="font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase;">Mempelai</span>
+            <a class="nav-link py-1" href="#bride" style="transition: all 0.3s ease;">
+                <i class="fa-solid fa-heart d-block mb-1" style="font-size: 1.1rem;"></i>
+                <span style="font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Mempelai</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-light opacity-75" href="#agenda" style="transition: all 0.3s ease;">
-                <i class="fa-solid fa-calendar-day mb-1" style="font-size: 1.1rem;"></i>
-                <span class="d-block fw-bold" style="font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase;">Acara</span>
+            <a class="nav-link py-1" href="#wedding-date" style="transition: all 0.3s ease;">
+                <i class="fa-solid fa-calendar-check d-block mb-1" style="font-size: 1.1rem;"></i>
+                <span style="font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Tanggal</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-light opacity-75" href="#gallery" style="transition: all 0.3s ease;">
-                <i class="fa-solid fa-photo-film mb-1" style="font-size: 1.1rem;"></i>
-                <span class="d-block fw-bold" style="font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase;">Galeri</span>
+            <a class="nav-link py-1" href="#gallery" style="transition: all 0.3s ease;">
+                <i class="fa-solid fa-photo-film d-block mb-1" style="font-size: 1.1rem;"></i>
+                <span style="font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Galeri</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-light opacity-75" href="#comment" style="transition: all 0.3s ease;">
-                <i class="fa-solid fa-paper-plane mb-1" style="font-size: 1.1rem;"></i>
-                <span class="d-block fw-bold" style="font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase;">Pesan</span>
+            <a class="nav-link py-1" href="#comment" style="transition: all 0.3s ease;">
+                <i class="fa-solid fa-message d-block mb-1" style="font-size: 1.1rem;"></i>
+                <span style="font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Ucapan</span>
             </a>
         </li>
     </ul>
@@ -1433,19 +1434,6 @@ fetch(csvURL)
             opacity: 0;
         }
     }
-</style>
-
-<style>
-    #navbar-menu .nav-link:focus, 
-    #navbar-menu .nav-link:active,
-    #navbar-menu .nav-link.active {
-        color: var(--gold-primary) !important;
-        opacity: 1 !important;
-        transform: translateY(-3px);
-    }
-    
-    /* Menghilangkan border default bootstrap */
-    .navbar { border-top: 1px solid rgba(197, 160, 89, 0.3) !important; }
 </style>
 
 
