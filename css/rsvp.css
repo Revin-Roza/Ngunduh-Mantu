@@ -1,160 +1,110 @@
-/* SECTION RSVP */
-
-.rsvp-section{
-
-background:#f4f4f4;
-
-color:#1e1e1e;
-
-padding-top:70px;
-padding-bottom:70px;
-
+/* =======================================================================
+   [SECTION] RSVP & KONFIRMASI KEHADIRAN
+   ======================================================================= */
+.rsvp-section {
+    background-color: var(--pria-bg-dark, #0f1720); /* Konsisten dengan Navy Deep */
+    color: var(--pria-text-main, #ffffff);
+    padding: 80px 0;
+    text-align: center;
 }
 
-
-/* TITLE */
-
-.rsvp-title{
-
-font-family:'Playfair Display',serif;
-
-font-size:2rem;
-
-color:#1f1f1f;
-
-margin-bottom:12px;
-
+/* --- TITLE & DESCRIPTION --- */
+.rsvp-title {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 2.5rem;
+    color: var(--pria-gold, #c5a059);
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
-
-/* DESKRIPSI */
-
-.rsvp-desc{
-
-max-width:420px;
-
-margin:auto;
-
-font-size:0.95rem;
-
-line-height:1.6;
-
-color:#555;
-
-margin-bottom:35px;
-
+.rsvp-desc {
+    max-width: 450px;
+    margin: 0 auto 40px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--pria-text-muted, rgba(255, 255, 255, 0.7));
+    padding: 0 20px;
 }
 
-
-/* FORM */
-
-.rsvp-form{
-
-max-width:420px;
-
+/* --- FORM LAYOUT --- */
+.rsvp-form {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-
-/* FIELD */
-
-.rsvp-field{
-
-text-align:left;
-
-margin-bottom:20px;
-
+.rsvp-field {
+    text-align: left;
+    margin-bottom: 25px;
 }
 
-
-/* LABEL */
-
-.rsvp-field label{
-
-font-size:0.85rem;
-
-font-weight:500;
-
-color:#444;
-
-margin-bottom:6px;
-
-display:block;
-
+.rsvp-field label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--pria-gold, #c5a059);
+    margin-bottom: 10px;
+    display: block;
 }
 
-
-/* INPUT */
-
-.rsvp-input{
-
-width:100%;
-
-border-radius:22px;
-
-border:1px solid #ddd;
-
-padding:12px 16px;
-
-font-size:0.95rem;
-
-background:#1f232b;
-
-color:white;
-
+/* --- INPUT & TEXTAREA --- */
+.rsvp-input {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 1rem !important; /* Mencegah auto-zoom di iPhone */
+    color: #ffffff !important;
+    transition: all 0.3s ease;
 }
 
-
-/* TEXTAREA */
-
-.rsvp-textarea{
-
-border-radius:14px;
-
-resize:none;
-
+.rsvp-textarea {
+    border-radius: 15px;
+    resize: none;
+    min-height: 120px;
 }
 
-
-/* FOCUS */
-
-.rsvp-input:focus{
-
-outline:none;
-
-border:1px solid #d4af37;
-
-box-shadow:0 0 6px rgba(212,175,55,0.4);
-
+.rsvp-input:focus {
+    outline: none;
+    border-color: var(--pria-gold, #c5a059);
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.15);
 }
 
-
-/* BUTTON */
-
-.rsvp-button{
-
-margin-top:10px;
-
-background:#d4af37;
-
-border:none;
-
-padding:13px 38px;
-
-border-radius:30px;
-
-font-size:0.95rem;
-
-color:white;
-
-transition:0.3s;
-
+/* Placeholder Styling */
+.rsvp-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
 }
 
+/* --- ACTION BUTTON --- */
+.rsvp-button {
+    width: 100%;
+    margin-top: 15px;
+    background: var(--pria-gold, #c5a059);
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0f1720; /* Teks gelap agar kontras & mewah */
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
 
-.rsvp-button:hover{
+.rsvp-button:hover {
+    background: #e2c285; /* Gold lebih terang saat hover */
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(197, 160, 89, 0.3);
+}
 
-background:#c19a2b;
-
-transform:translateY(-2px);
-
+.rsvp-button:active {
+    transform: translateY(0);
 }
