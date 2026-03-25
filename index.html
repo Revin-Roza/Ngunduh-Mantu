@@ -460,93 +460,95 @@
     
 
 <!-- Wedding Date -->
-<section class="py-5 overflow-hidden" id="wedding-date-section" style="background-color: var(--navy-deep);">
-    <div class="container text-center text-light px-3">
-        <div data-aos="fade-up" data-aos-duration="1000">
-            <h2 class="font-esthetic mb-4" style="font-size: 3rem; color: var(--gold-primary); text-shadow: 2px 4px 10px rgba(0,0,0,0.5);">
+<section class="py-5 overflow-hidden" id="wedding-date-section" 
+         style="background: var(--bg-mesh); background-color: var(--navy-deep); position: relative;">
+    
+    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10" style="pointer-events: none; background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
+
+    <div class="container text-center text-light px-3 py-5 position-relative">
+        <div data-aos="fade-up">
+            <h2 class="font-esthetic mb-2" style="font-size: 3.5rem; color: var(--gold-primary); text-shadow: 0 10px 30px rgba(197, 160, 89, 0.4);">
                 Momen Bahagia
             </h2>
+            <div class="d-flex justify-content-center align-items-center gap-2 mb-5">
+                <div style="width: 30px; height: 1px; background: var(--gold-primary);"></div>
+                <i class="fa-solid fa-heart small text-gold-shimmer"></i>
+                <div style="width: 30px; height: 1px; background: var(--gold-primary);"></div>
+            </div>
         </div>
 
-        <div class="countdown-wrapper shadow-lg py-4 px-2 mb-5 mx-auto rounded-5"
-            data-aos="zoom-in" data-aos-duration="1200"
-            style="max-width: 550px; width: 100%; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px);">
-            <div class="row g-0 align-items-center text-center">
-
+        <div class="countdown-wrapper shadow-lg py-5 px-3 mb-5 mx-auto rounded-5 floating-card"
+            data-aos="zoom-in"
+            style="max-width: 550px; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(25px); box-shadow: 0 20px 50px rgba(0,0,0,0.5) !important;">
+            <div class="row g-0 align-items-center">
                 <div class="col-3">
-                    <div class="d-flex flex-column py-2">
-                        <h3 class="m-0 fw-bold" id="day" style="color: var(--gold-primary); font-size: 2.2rem; line-height: 1; font-family: 'Plus Jakarta Sans', sans-serif;">0</h3>
-                        <small class="text-uppercase mt-2 fw-bold" style="font-size: 0.6rem; letter-spacing: 2px; color: #ffffff; opacity: 0.5;">Hari</small>
-                    </div>
+                    <h3 class="m-0 fw-bold countdown-number" id="day" style="font-size: 3rem; font-family: 'Plus Jakarta Sans';">0</h3>
+                    <small class="text-uppercase d-block mt-2 fw-bold" style="font-size: 0.65rem; letter-spacing: 3px; color: var(--gold-primary); opacity: 0.8;">Hari</small>
                 </div>
-
-                <div class="col-3 border-start border-secondary opacity-75">
-                    <div class="d-flex flex-column py-2">
-                        <h3 class="m-0 fw-bold" id="hour" style="font-size: 2.2rem; line-height: 1; color: var(--gold-primary); font-family: 'Plus Jakarta Sans', sans-serif;">0</h3>
-                        <small class="text-uppercase mt-2 fw-bold" style="font-size: 0.6rem; letter-spacing: 2px; color: #ffffff; opacity: 0.5;">Jam</small>
-                    </div>
+                <div class="col-3 border-start border-white border-opacity-10">
+                    <h3 class="m-0 fw-bold countdown-number" id="hour" style="font-size: 3rem; font-family: 'Plus Jakarta Sans';">0</h3>
+                    <small class="text-uppercase d-block mt-2 fw-bold" style="font-size: 0.65rem; letter-spacing: 3px; color: var(--gold-primary); opacity: 0.8;">Jam</small>
                 </div>
-
-                <div class="col-3 border-start border-secondary opacity-75">
-                    <div class="d-flex flex-column py-2">
-                        <h3 class="m-0 fw-bold" id="minute" style="font-size: 2.2rem; line-height: 1; color: var(--gold-primary); font-family: 'Plus Jakarta Sans', sans-serif;">0</h3>
-                        <small class="text-uppercase mt-2 fw-bold" style="font-size: 0.6rem; letter-spacing: 2px; color: #ffffff; opacity: 0.5;">Menit</small>
-                    </div>
+                <div class="col-3 border-start border-white border-opacity-10">
+                    <h3 class="m-0 fw-bold countdown-number" id="minute" style="font-size: 3rem; font-family: 'Plus Jakarta Sans';">0</h3>
+                    <small class="text-uppercase d-block mt-2 fw-bold" style="font-size: 0.65rem; letter-spacing: 3px; color: var(--gold-primary); opacity: 0.8;">Menit</small>
                 </div>
-
-                <div class="col-3 border-start border-secondary opacity-75">
-                    <div class="d-flex flex-column py-2">
-                        <h3 class="m-0 fw-bold" id="second" style="font-size: 2.2rem; line-height: 1; color: var(--gold-primary); font-family: 'Plus Jakarta Sans', sans-serif;">0</h3>
-                        <small class="text-uppercase mt-2 fw-bold" style="font-size: 0.6rem; letter-spacing: 2px; color: #ffffff; opacity: 0.5;">Detik</small>
-                    </div>
+                <div class="col-3 border-start border-white border-opacity-10">
+                    <h3 class="m-0 fw-bold countdown-number" id="second" style="font-size: 3rem; font-family: 'Plus Jakarta Sans';">0</h3>
+                    <small class="text-uppercase d-block mt-2 fw-bold" style="font-size: 0.65rem; letter-spacing: 3px; color: var(--gold-primary); opacity: 0.8;">Detik</small>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="agenda" class="pb-5 text-light" style="background-color: var(--navy-deep); padding-top: 20px;">
+<section id="agenda" class="pb-5 text-light" style="background: var(--bg-mesh); background-color: var(--navy-deep);">
     <div class="container text-center px-4">
-        <p class="opening-text mx-auto mb-5 text-white-50" style="max-width: 600px; font-size: 0.95rem; line-height: 1.8; font-style: italic; font-family: 'Plus Jakarta Sans', sans-serif;">
-            Dengan memohon rahmat dan rida Allah Subhanahu Wa Ta'ala, insyaAllah kami bermaksud menyelenggarakan acara:
-        </p>
+        <div data-aos="fade-up">
+            <p class="mx-auto mb-5 text-white-50" style="max-width: 600px; font-size: 1.05rem; line-height: 2; font-family: 'Plus Jakarta Sans'; letter-spacing: 0.5px;">
+                <span class="text-gold-shimmer fw-bold" style="font-size: 1.5rem; display: block; margin-bottom: 10px;">Bismillahirrahmannirrahim</span>
+                Dengan memohon rahmat dan rida Allah Subhanahu Wa Ta'ala, insyaAllah kami bermaksud menyelenggarakan acara:
+            </p>
+        </div>
 
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
                 <div class="agenda-card p-4 p-md-5 rounded-5 shadow-lg mx-auto position-relative overflow-hidden"
-                    data-aos="fade-up" data-aos-duration="1200"
-                    style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.25); max-width: 600px; width: 100%; backdrop-filter: blur(15px);">
+                    data-aos="fade-up"
+                    style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.2); max-width: 600px; backdrop-filter: blur(20px); border-radius: 40px !important;">
                     
-                    <div class="position-absolute opacity-25" style="top: -10px; right: -10px; transform: rotate(45deg);">
-                         <i class="fa-solid fa-crown" style="font-size: 4rem; color: var(--gold-primary);"></i>
+                    <div class="position-absolute" style="top: -30px; right: -30px; opacity: 0.05; transform: rotate(15deg);">
+                         <i class="fa-solid fa-crown" style="font-size: 12rem; color: var(--gold-primary);"></i>
                     </div>
 
-                    <div class="agenda-header fw-bold text-uppercase mb-4" style="color: var(--gold-primary); font-size: 0.8rem; letter-spacing: 4px; font-family: 'Plus Jakarta Sans', sans-serif;">
+                    <div class="agenda-header fw-bold text-uppercase mb-4" style="color: var(--gold-primary); font-size: 0.85rem; letter-spacing: 6px; opacity: 0.9;">
                         RESEPSI KEDUA
                     </div>
 
-                    <div class="row align-items-start justify-content-center">
-                        <div class="col-12">
-                            <h3 class="font-esthetic mb-3" style="font-size: 3.5rem; color: var(--gold-primary); text-shadow: 2px 2px 5px rgba(0,0,0,0.3);">Ngunduh Mantu</h3>
-                            <p class="fw-bold mb-1" style="font-size: 1.3rem; color: #ffffff; letter-spacing: 1px;">Senin, 06 April 2026</p>
-                            <p class="fw-medium text-white-50" style="font-size: 1rem; letter-spacing: 1px;">Pukul 10.00 WIB - Selesai</p>
+                    <div class="mb-5 position-relative">
+                        <h3 class="font-esthetic mb-3" style="font-size: 4rem; color: var(--gold-primary); line-height: 1.2;">Ngunduh Mantu</h3>
+                        <div class="py-2 px-4 d-inline-block rounded-pill mb-3" style="background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.15), transparent); border: 1px solid var(--gold-soft);">
+                            <p class="fw-bold mb-0 text-white" style="font-size: 1.2rem; letter-spacing: 1.5px;">Senin, 06 April 2026</p>
                         </div>
+                        <p class="fw-medium text-white-50" style="font-size: 1.1rem; letter-spacing: 1px;">Pukul 10.00 WIB - Selesai</p>
                     </div>
 
-                    <div class="location-section pt-5 mt-4" style="border-top: 1px solid rgba(197, 160, 89, 0.2);">
-                        <div class="mb-3">
-                            <i class="fa-solid fa-location-dot" style="color: var(--gold-primary); font-size: 1.8rem; filter: drop-shadow(0 0 10px rgba(197,160,89,0.5));"></i>
+                    <div class="location-section pt-5 mt-4" style="border-top: 1px solid rgba(197, 160, 89, 0.15);">
+                        <div class="pulse-gold d-inline-flex align-items-center justify-content-center rounded-circle mb-4" style="width: 70px; height: 70px; background: rgba(197, 160, 89, 0.1);">
+                            <i class="fa-solid fa-map-pin" style="color: var(--gold-primary); font-size: 1.8rem;"></i>
                         </div>
-                        <p class="address mx-auto" style="font-size: 0.95rem; color: #ffffff; line-height: 1.8; max-width: 450px; font-family: 'Plus Jakarta Sans', sans-serif;">
-                            <strong style="color: var(--gold-primary); display: block; margin-bottom: 8px; font-size: 1.15rem; text-transform: uppercase; letter-spacing: 1px;">Kediaman Mempelai Pria</strong>
-                            Jalan Hang Lekir No. 324 Desa Sejangat, <br> Kec. Bukit Batu, Bengkalis, Riau 28761.
+                        
+                        <p class="address mx-auto" style="font-size: 1rem; color: #ffffff; line-height: 1.9; max-width: 450px;">
+                            <strong style="color: var(--gold-primary); display: block; margin-bottom: 12px; font-size: 1.3rem; letter-spacing: 2px; text-transform: uppercase;">Kediaman Mempelai Pria</strong>
+                            Jalan Hang Lekir No. 324 Desa Sejangat, <br> 
+                            Kec. Bukit Batu, Bengkalis, Riau 28761.
                         </p>
                     </div>
 
-                    <a href="https://maps.app.goo.gl/YourGoogleMapsLinkHere" target="_blank"
-                        class="btn btn-premium rounded-pill py-3 px-5 mt-4 fw-bold shadow-lg text-decoration-none d-inline-block"
-                        style="font-size: 0.85rem; letter-spacing: 2px; min-width: 250px;">
-                        <i class="fa-solid fa-map-location-dot me-2"></i> LIHAT LOKASI MAPS
+                    <a href="https://maps.google.com/?q=Jalan+Hang+Lekir+No.+324+Desa+Sejangat" target="_blank"
+                        class="btn btn-premium w-100 py-3 mt-5 fw-bold shadow-lg text-decoration-none"
+                        style="border-radius: 50px; background: linear-gradient(135deg, #c5a059, #8e6d2f); color: #000 !important; font-size: 0.9rem; letter-spacing: 2px;">
+                        <i class="fa-solid fa-location-arrow me-2"></i> BUKA PETUNJUK LOKASI
                     </a>
                 </div>
             </div>
