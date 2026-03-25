@@ -1,166 +1,131 @@
 /* =======================================================================
-   [1] GLOBAL THEME & TYPOGRAPHY (REVIN & ROZA)
+   [1] GLOBAL THEME & VARIABLE (NAVY GOLD CONCEPT)
    ======================================================================= */
 :root {
-    --gold-luxury: #D4AF37;
-    --dark-bg: #0f1720;       /* Konsisten dengan Navy Pria */
-    --dark-card: #16212e;     /* Sedikit lebih terang untuk dimensi */
-    --soft-white: #E0E0E0;
-    --muted-grey: #A0A0A0;
-    --border-gold-soft: rgba(212, 175, 55, 0.2);
+    /* Palet Warna Variatif */
+    --navy-deep: #0a1118;        /* Background utama */
+    --navy-light: #16212e;       /* Untuk card/dimensi */
+    --gold-primary: #c5a059;     /* Emas utama */
+    --gold-soft: rgba(197, 160, 89, 0.2);
+    --gold-glow: 0 0 15px rgba(197, 160, 89, 0.3);
+    
+    /* Text Colors */
+    --text-pure: #ffffff;
+    --text-glass: rgba(255, 255, 255, 0.8); /* Transparan tapi terbaca */
+    --text-muted: rgba(255, 255, 255, 0.5);
 }
 
-body, input, textarea, select, button, p, span {
-    font-family: 'Montserrat', sans-serif !important;
-    background-color: var(--dark-bg);
-    color: var(--soft-white);
+/* Reset Dasar: Menghilangkan background di teks agar transparan */
+body {
+    background-color: var(--navy-deep);
+    color: var(--text-pure);
+    font-family: 'Inter', sans-serif; /* Lebih bersih & premium */
+    overflow-x: hidden;
 }
 
+p, span, h1, h2, h3, h4, h5, h6 {
+    background-color: transparent !important; /* MENGHILANGKAN KOTAK DI BELAKANG TEKS */
+    margin: 0;
+}
+
+/* =======================================================================
+   [2] TYPOGRAPHY SYSTEM (READABILITY & AESTHETIC)
+   ======================================================================= */
 .font-esthetic {
     font-family: "Playfair Display", serif !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
+    font-style: italic;
     letter-spacing: 1px;
-    color: var(--gold-luxury) !important;
+    color: var(--gold-primary) !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-/* Fix FontAwesome agar tidak tertimpa Montserrat */
-.fa, .fas, .far, .fab, .fa-solid {
-    font-family: "Font Awesome 6 Free" !important;
-    font-weight: 900;
-}
+.fw-light { font-weight: 300 !important; letter-spacing: 2px; }
+.fw-medium { font-weight: 500 !important; }
 
 /* =======================================================================
-   [2] WEDDING GIFT SECTION (REKENING & QRIS)
+   [3] GLASSMORPHISM COMPONENTS (EFEK TRANSPARAN PREMIUM)
    ======================================================================= */
-.bg-light-dark {
-    background: linear-gradient(180deg, #0f1720, #1a1f27);
-    color: #e5e7eb;
-}
-
-.gift-card {
-    background: var(--dark-card) !important;
-    border: 1px solid var(--border-gold-soft) !important;
-    border-radius: 14px;
-    padding: 20px;
-    text-align: center;
-    transition: all .3s ease;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-.gift-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--gold-luxury) !important;
-}
-
-.gift-number {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #ffffff;
-    margin: 8px 0;
-}
-
-.gift-copy {
-    border: 1px solid var(--gold-luxury);
-    background: transparent;
-    color: var(--gold-luxury);
-    font-size: .75rem;
-    padding: 6px 16px;
+.glass-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(197, 160, 89, 0.15);
     border-radius: 20px;
-    transition: all .25s ease;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.gift-copy:hover {
-    background: var(--gold-luxury);
-    color: #000;
-}
-
-/* =======================================================================
-   [3] RSVP & GUESTBOOK (INTERAKSI TAMU)
-   ======================================================================= */
-.rsvp-form {
-    max-width: 500px;
-    background: var(--dark-card) !important;
-    padding: 25px;
-    border-radius: 20px;
-    border: 1px solid var(--border-gold-soft);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-    margin: 0 auto;
-}
-
-.rsvp-input {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: white !important;
-    font-size: 1rem !important; /* Mencegah auto-zoom iPhone */
-    padding: 12px;
-    border-radius: 10px;
-}
-
-.rsvp-input:focus {
-    border-color: var(--gold-luxury) !important;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.2) !important;
-}
-
-.ucapan-box {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-gold-soft);
+/* Wedding Gift & Agenda Card */
+.gift-card, .agenda-card {
+    background: rgba(255, 255, 255, 0.02) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--gold-soft) !important;
     border-radius: 18px;
-    height: 450px;
-    padding: 15px;
-    -webkit-overflow-scrolling: touch;
+    padding: 25px;
+    transition: all 0.4s ease;
+}
+
+.gift-card:hover, .agenda-card:hover {
+    border-color: var(--gold-primary) !important;
+    transform: translateY(-5px);
+    box-shadow: var(--gold-glow);
 }
 
 /* =======================================================================
-   [4] AGENDA SECTION (NGUNDUH MANTU)
+   [4] INTERACTION & BUTTONS
    ======================================================================= */
-.agenda-card {
-    background: linear-gradient(145deg, #16212e, #0f1720) !important;
-    border: 1px solid var(--border-gold-soft) !important;
-    border-radius: 25px;
-    padding: 40px 25px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.agenda-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--gold-luxury) !important;
-    box-shadow: 0 15px 40px rgba(197, 160, 89, 0.15);
-}
-
-.btn-maps-modern {
+.btn-premium {
     background: transparent;
-    color: var(--gold-luxury);
-    border: 1px solid var(--gold-luxury);
+    color: var(--gold-primary);
+    border: 1px solid var(--gold-primary);
     border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 0.8rem;
     font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     transition: all 0.3s ease;
 }
 
-.btn-maps-modern:hover {
-    background: var(--gold-luxury);
-    color: #0c0c0c;
-    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+.btn-premium:hover {
+    background: var(--gold-primary);
+    color: var(--navy-deep);
+    box-shadow: var(--gold-glow);
+}
+
+/* Form Input (RSVP) */
+.rsvp-input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border-radius: 12px;
+    padding: 12px 15px;
+}
+
+.rsvp-input:focus {
+    border-color: var(--gold-primary) !important;
+    box-shadow: none !important;
 }
 
 /* =======================================================================
-   [5] COUNTDOWN & DECORATIVE DIVIDERS
+   [5] SCROLLBAR & UTILITIES
    ======================================================================= */
-#wedding-date .rounded-4 {
-    background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid var(--border-gold-soft) !important;
-    backdrop-filter: blur(8px);
+/* Menghilangkan scrollbar tapi tetap bisa di-scroll */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-.transition-linear-clean {
-    height: 80px;
-    background: linear-gradient(to bottom, #0f1720 0%, #000000 100%) !important;
-    margin: -1px 0;
+/* Animasi Pulse untuk Ring Foto */
+.pulse-gold {
+    animation: pulse-border 2s infinite;
 }
 
-/* Custom Scrollbar untuk Ucapan */
-.ucapan-box::-webkit-scrollbar { width: 3px; }
-.ucapan-box::-webkit-scrollbar-thumb {
-    background: var(--gold-luxury);
-    border-radius: 10px;
+@keyframes pulse-border {
+    0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(197, 160, 89, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
 }
