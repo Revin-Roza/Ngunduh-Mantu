@@ -1,6 +1,19 @@
+/* =======================================================================
+   [1] CONFIGURATION & VARIABLES
+   ======================================================================= */
+:root {
+    --pria-bg-dark: #0f1720;
+    --pria-bg-card: #16212e;
+    --pria-gold: #c5a059;
+    --pria-gold-soft: rgba(197, 160, 89, 0.2);
+    --pria-text-main: #ffffff;
+    --pria-text-muted: rgba(255, 255, 255, 0.65);
+}
+
 html {
     scroll-behavior: smooth !important;
-    width: 100vw !important;
+    width: 100% !important; /* Diubah dari 100vw agar tidak bug horizontal */
+    overflow-x: hidden;
 }
 
 body {
@@ -8,26 +21,32 @@ body {
     padding: 0 !important;
     width: 100% !important;
     overflow-x: hidden !important;
+    background-color: var(--pria-bg-dark); /* Dasar warna tema pria */
+    color: var(--pria-text-main);
 }
 
+/* =======================================================================
+   [2] GLOBAL ELEMENT STYLES
+   ======================================================================= */
 i {
     width: auto !important;
 }
 
-body,
-div,
-nav,
-svg,
-section {
-    will-change: background-color;
-    transition: background-color 350ms ease;
+/* Transisi hanya untuk elemen tema agar ringan saat auto-scroll */
+.text-theme-auto, .bg-theme-auto, .navbar, .btn-outline-auto {
+    will-change: background-color, color;
+    transition: background-color 350ms ease, color 350ms ease;
 }
 
-svg>path {
+svg > path {
     will-change: color;
     transition: color 350ms ease;
 }
 
+/* =======================================================================
+   [3] BOOTSTRAP THEME ADAPTATION (NAVBAR & UI)
+   ======================================================================= */
+/* Navbar Glassmorphism */
 html[data-bs-theme="dark"] .navbar {
     background-color: rgba(var(--bs-dark-rgb), 0.75) !important;
     backdrop-filter: blur(0.5rem);
@@ -38,45 +57,27 @@ html[data-bs-theme="light"] .navbar {
     backdrop-filter: blur(0.5rem);
 }
 
-html[data-bs-theme="dark"] .text-theme-auto {
-    color: rgb(var(--bs-light-rgb));
-}
+/* Theme Auto Text */
+html[data-bs-theme="dark"] .text-theme-auto { color: rgb(var(--bs-light-rgb)); }
+html[data-bs-theme="light"] .text-theme-auto { color: rgb(var(--bs-dark-rgb)); }
 
-html[data-bs-theme="light"] .text-theme-auto {
-    color: rgb(var(--bs-dark-rgb));
-}
+/* Nav Links */
+html[data-bs-theme="dark"] .nav-link { color: rgba(var(--bs-white-rgb), 0.5); }
+html[data-bs-theme="light"] .nav-link { color: rgba(var(--bs-black-rgb), 0.5); }
 
-html[data-bs-theme="dark"] .nav-link {
-    color: rgba(var(--bs-white-rgb), 0.5);
-}
+/* Background Auto */
+html[data-bs-theme="dark"] .bg-theme-auto { background-color: var(--bs-gray-800); }
+html[data-bs-theme="light"] .bg-theme-auto { background-color: var(--bs-gray-100); }
 
-html[data-bs-theme="light"] .nav-link {
-    color: rgba(var(--bs-black-rgb), 0.5);
-}
-
-html[data-bs-theme="dark"] .bg-theme-auto {
-    background-color: var(--bs-gray-800);
-}
-
-html[data-bs-theme="light"] .bg-theme-auto {
-    background-color: var(--bs-gray-100);
-}
-
+/* =======================================================================
+   [4] BUTTON CUSTOMIZATION (AUTO-THEME)
+   ======================================================================= */
 html[data-bs-theme="dark"] .btn-outline-auto {
     --bs-btn-color: var(--bs-light);
     --bs-btn-border-color: var(--bs-light);
     --bs-btn-hover-color: var(--bs-black);
     --bs-btn-hover-bg: var(--bs-light);
     --bs-btn-hover-border-color: var(--bs-light);
-    --bs-btn-focus-shadow-rgb: var(--bs-light-rgb);
-    --bs-btn-active-color: var(--bs-black);
-    --bs-btn-active-bg: var(--bs-light);
-    --bs-btn-active-border-color: var(--bs-light);
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: var(--bs-light);
-    --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: var(--bs-light);
-    --bs-gradient: none;
 }
 
 html[data-bs-theme="light"] .btn-outline-auto {
@@ -85,17 +86,11 @@ html[data-bs-theme="light"] .btn-outline-auto {
     --bs-btn-hover-color: var(--bs-white);
     --bs-btn-hover-bg: var(--bs-dark);
     --bs-btn-hover-border-color: var(--bs-dark);
-    --bs-btn-focus-shadow-rgb: var(--bs-dark-rgb);
-    --bs-btn-active-color: var(--bs-white);
-    --bs-btn-active-bg: var(--bs-dark);
-    --bs-btn-active-border-color: var(--bs-dark);
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: var(--bs-dark);
-    --bs-btn-disabled-bg: transparent;
-    --bs-btn-disabled-border-color: var(--bs-dark);
-    --bs-gradient: none;
 }
 
+/* =======================================================================
+   [5] OVERLAYS & HOVER EFFECTS
+   ======================================================================= */
 html[data-bs-theme="dark"] .bg-overlay-auto {
     background-color: rgba(var(--bs-black-rgb), 0.5);
     backdrop-filter: blur(0.25rem);
