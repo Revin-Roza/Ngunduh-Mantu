@@ -773,23 +773,33 @@
 
 
 <!-- RSVP / Konfirmasi Kehadiran -->
-<section id="rsvp" class="rsvp-section py-3 bg-dark text-light">
-  <div class="container">
+<section id="rsvp" class="py-5" style="background-color: var(--navy-deep); border-top: 1px solid rgba(197, 160, 89, 0.1);">
+  <div class="container px-4">
     <div class="rsvp-content text-center mx-auto" style="max-width: 600px;">
-      <h2 class="font-esthetic mb-3" style="font-size: 2.5rem;">Konfirmasi Kehadiran</h2>
-      <p class="mb-5" style="color: #ccc; font-size: 0.95rem;">
-        Merupakan suatu kehormatan bagi kami jika Bapak/Ibu/Saudara/i berkenan memberikan konfirmasi kehadiran serta doa restu.
-      </p>
+      
+      <div data-aos="fade-down">
+        <h2 class="font-esthetic mb-3" style="font-size: 3rem; color: var(--gold-primary); text-shadow: 2px 4px 10px rgba(0,0,0,0.5);">
+            Konfirmasi Kehadiran
+        </h2>
+        <p class="mb-5 text-white-50" style="font-size: 0.95rem; line-height: 1.8; font-family: 'Plus Jakarta Sans', sans-serif;">
+            Merupakan suatu kehormatan bagi kami jika Bapak/Ibu/Saudara/i berkenan memberikan konfirmasi kehadiran serta doa restu.
+        </p>
+      </div>
 
-      <form id="rsvp-form" class="text-start bg-secondary bg-opacity-10 p-4 rounded-4 shadow-sm">
+      <form id="rsvp-form" class="text-start p-4 p-md-5 rounded-5 shadow-lg" 
+            data-aos="zoom-in"
+            style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.2); backdrop-filter: blur(15px);">
+        
         <div class="mb-4">
-          <label for="nama" class="form-label small fw-bold text-uppercase" style="letter-spacing: 1px;">Nama Lengkap</label>
-          <input type="text" class="form-control bg-dark text-light border-secondary py-2" id="nama" placeholder="Contoh: Akmarifli" required>
+          <label for="nama" class="form-label small fw-bold text-uppercase" style="letter-spacing: 2px; color: var(--gold-primary); font-size: 0.7rem;">Nama Lengkap</label>
+          <input type="text" class="form-control shadow-none py-3 px-4" id="nama" placeholder="Nama Anda..." required
+                 style="background: rgba(10, 17, 24, 0.6); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 15px;">
         </div>
 
         <div class="mb-4">
-          <label for="hadir" class="form-label small fw-bold text-uppercase" style="letter-spacing: 1px;">Konfirmasi Kehadiran</label>
-          <select class="form-select bg-dark text-light border-secondary py-2" id="hadir">
+          <label for="hadir" class="form-label small fw-bold text-uppercase" style="letter-spacing: 2px; color: var(--gold-primary); font-size: 0.7rem;">Konfirmasi Kehadiran</label>
+          <select class="form-select shadow-none py-3 px-4" id="hadir" 
+                  style="background: rgba(10, 17, 24, 0.6); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 15px;">
             <option value="Hadir" selected>Berkenan Hadir</option>
             <option value="Tidak Hadir">Mohon Maaf, Berhalangan Hadir</option>
             <option value="Masih Ragu">Masih Dalam Konfirmasi</option>
@@ -797,13 +807,15 @@
         </div>
 
         <div class="mb-4">
-          <label for="ucapan" class="form-label small fw-bold text-uppercase" style="letter-spacing: 1px;">Ucapan & Doa Setulus Hati</label>
-          <textarea class="form-control bg-dark text-light border-secondary" id="ucapan" rows="4" placeholder="Tuliskan ucapan atau doa Anda di sini..."></textarea>
+          <label for="ucapan" class="form-label small fw-bold text-uppercase" style="letter-spacing: 2px; color: var(--gold-primary); font-size: 0.7rem;">Ucapan & Doa Setulus Hati</label>
+          <textarea class="form-control shadow-none px-4 py-3" id="ucapan" rows="4" placeholder="Tuliskan pesan Anda di sini..."
+                    style="background: rgba(10, 17, 24, 0.6); color: #fff; border: 1px solid rgba(255,255,255,0.1); border-radius: 15px;"></textarea>
         </div>
 
-        <div class="text-center">
-          <button class="btn btn-light px-5 py-2 fw-bold" type="submit" style="border-radius: 50px; transition: 0.3s;">
-            Kirim Konfirmasi
+        <div class="text-center pt-2">
+          <button class="btn btn-premium w-100 py-3 rounded-pill fw-bold shadow-lg" type="submit" 
+                  style="letter-spacing: 2px; font-size: 0.9rem;">
+            <i class="fa-solid fa-paper-plane me-2"></i> KIRIM KONFIRMASI
           </button>
         </div>
       </form>
@@ -811,19 +823,22 @@
   </div>
 </section>
 
-<hr class="m-0" style="opacity: 0.1;">
-
-<section id="guestbook" class="py-5 bg-dark text-light">
-  <div class="container"> 
-    <h2 class="font-esthetic text-center mb-2" style="font-size: 2.5rem;">Ucapan & Doa</h2>
-    <p class="text-center mb-5" style="color: #ccc;">Terima kasih yang tulus atas segala doa restu dan kasih sayang yang telah diberikan bagi kebahagiaan kami.</p>
+<section id="guestbook" class="py-5" style="background-color: var(--navy-light);">
+  <div class="container px-4"> 
+    <div data-aos="fade-up">
+        <h2 class="font-esthetic text-center mb-2" style="font-size: 3rem; color: var(--gold-primary);">Ucapan & Doa</h2>
+        <p class="text-center mb-5 text-white-50" style="font-size: 0.95rem;">Terima kasih atas doa restu bagi kebahagiaan kami.</p>
+    </div>
     
-    <div class="mx-auto" style="max-width: 700px;">
-      <div id="ucapan-container" class="p-3 rounded" style="max-height: 500px; overflow-y: auto; background: rgba(255,255,255,0.03);">
-          <div class="mb-3 border-bottom border-secondary pb-3">
-              <h6 class="mb-1 text-info">Nama Tamu</h6>
-              <p class="small mb-0 text-secondary italic">"Semoga menjadi keluarga yang Sakinah Mawaddah Warahmah."</p>
+    <div class="mx-auto" style="max-width: 700px;" data-aos="fade-up">
+      <div id="ucapan-container" class="p-4 rounded-5 with-scrollbar shadow-inner" 
+           style="max-height: 500px; overflow-y: auto; background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(197, 160, 89, 0.1);">
+          
+          <div class="mb-4 p-3 rounded-4 shadow-sm" style="background: rgba(255,255,255,0.03); border-left: 3px solid var(--gold-primary);">
+              <h6 class="mb-1" style="color: var(--gold-primary); font-weight: 700; font-family: 'Plus Jakarta Sans', sans-serif;">Nama Tamu</h6>
+              <p class="small mb-0 text-white-50 italic" style="line-height: 1.6;">"Semoga menjadi keluarga yang Sakinah Mawaddah Warahmah. Amin!"</p>
           </div>
+
       </div>
     </div>
   </div>
