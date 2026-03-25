@@ -135,7 +135,8 @@
 
              
         <!-- Home -->
-<section id="home" class="p-0 m-0 position-relative overflow-hidden" style="background-color: #000000; min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+<section id="home" class="p-0 m-0 position-relative overflow-hidden" 
+         style="background-color: var(--pria-bg-dark); min-height: 100vh; display: flex; align-items: center; justify-content: center;">
     
     <img src="./assets/images/Cover_rr.webp" 
          alt="Background" 
@@ -146,109 +147,127 @@
             height: 100%; 
             object-fit: cover; 
             top: 0; 
-            opacity: 0.29; 
-            filter: grayscale(20%);
-            -webkit-mask-image: linear-gradient(to bottom, 
-                rgba(0,0,0,1) 0%, 
-                rgba(0,0,0,1) 50%, 
-                rgba(0,0,0,0) 100%);
-            mask-image: linear-gradient(to bottom, 
-                rgba(0,0,0,1) 0%, 
-                rgba(0,0,0,1) 50%, 
-                rgba(0,0,0,0) 100%);
+            opacity: 0.35; 
+            filter: grayscale(30%) brightness(0.7);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
          "
          loading="lazy">
 
-    <div class="position-relative text-center text-light w-100" style="z-index: 1; padding: 2rem 0;"> 
+    <div class="position-relative text-center text-light w-100" style="z-index: 1; padding: 3rem 0;"> 
         
-        <h1 class="font-esthetic fw-medium mb-0" style="font-size: 1.8rem; letter-spacing: 2px; color: rgba(255,255,255,0.8);">Undangan Pernikahan</h1>
+        <p class="font-esthetic fw-medium mb-0" 
+           style="font-size: 1.6rem; letter-spacing: 2px; color: var(--pria-text-muted); opacity: 0.8;">
+           Undangan Pernikahan
+        </p>
 
         <div class="d-flex justify-content-center my-4">
-            <div style="padding: 5px; border: 2px solid #c5a059; border-radius: 50%;">
+            <div class="pulse-gold" style="padding: 6px; border: 2px solid var(--pria-gold); border-radius: 50%;">
                 <img src="./assets/images/Cover_rr.webp" 
-                     alt="Foto Profil"
+                     alt="Foto Profil Revin & Roza"
                      onclick="undangan.guest.modal(this)" 
                      class="rounded-circle shadow-lg cursor-pointer"
-                     style="width: 150px; height: 150px; object-fit: cover; display: block;">
+                     style="width: 145px; height: 145px; object-fit: cover; display: block; border: 2px solid rgba(255,255,255,0.1);">
             </div>
         </div>
 
-        <h2 class="font-esthetic mb-2" style="color: #c5a059; font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-top: 4.3rem;">Revin &amp; Roza</h2>
+        <h2 class="font-esthetic mb-2" 
+            style="color: var(--pria-gold); font-size: 3.5rem; text-shadow: 0 0 20px rgba(197,160,89,0.3), 2px 2px 5px rgba(0,0,0,0.8); margin-top: 1.5rem;">
+            Revin <span style="font-size: 0.6em;">&amp;</span> Roza
+        </h2>
         
-        <p class="mb-4 fw-light" style="font-size: 1.1rem; letter-spacing: 3px; color: rgba(255,255,255,0.7);">Senin, 06 April 2026</p>
+        <p class="mb-4 fw-light" 
+           style="font-size: 1.1rem; letter-spacing: 4px; color: var(--pria-text-main); text-transform: uppercase;">
+           Senin, 06 April 2026
+        </p>
 
-        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Revin+%26+Roza&dates=20260404T010000Z/20260404T120000Z" 
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Revin+%26+Roza&dates=20260406T030000Z/20260406T120000Z" 
            target="_blank"
-           class="btn btn-sm shadow rounded-pill px-4 py-2 mt-2" 
-           style="font-size: 0.75rem; border: 1px solid #c5a059; color: #c5a059; background: transparent; transition: 0.3s;">
+           class="btn btn-sm shadow-sm rounded-pill px-4 py-2 mt-2" 
+           style="font-size: 0.75rem; border: 1px solid var(--pria-gold); color: var(--pria-gold); background: rgba(197,160,89,0.05); transition: 0.3s; font-weight: 600; letter-spacing: 1px;">
             <i class="fa-solid fa-calendar-check me-2"></i>SAVE TO CALENDAR
         </a>
 
-        <div class="d-flex flex-column align-items-center" style="margin-top: 4rem;">
-            <div class="mouse-animation border border-light border-1 rounded-5 opacity-25" style="width: 20px; height: 32px; position: relative;">
-                <div style="width: 2px; height: 6px; background-color: white; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); border-radius: 2px; animation: scroll-dot 2s infinite;"></div>
+        <div class="d-flex flex-column align-items-center" style="margin-top: 4.5rem;">
+            <div class="mouse-animation" style="opacity: 0.4;">
+                <div class="scroll-animation"></div>
             </div>
-            <p class="mt-2 m-0 text-light opacity-25" style="font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase;">Scroll Down</p>
+            <p class="mt-2 m-0 text-light opacity-25" 
+               style="font-size: 0.55rem; letter-spacing: 4px; text-transform: uppercase; font-weight: 500;">
+               Scroll Down
+            </p>
         </div>
     </div>
 </section>
 
                        
                    <!-- Bride -->
-<section class="text-center pt-5 overflow-hidden" id="bride" style="background-color: #000000; color: #ffffff; padding-bottom: 0.5rem;">
+<section id="bride" class="text-center pt-5 overflow-hidden" 
+         style="background-color: var(--pria-bg-dark); color: var(--pria-text-main); padding-bottom: 2rem;">
     
-    <div class="py-2 px-3 mb-3">
-        <h2 class="font-arabic m-0" style="font-size: 1.6rem; color: #c5a059;">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
-        <h2 class="font-esthetic mt-3 m-0" style="font-size: 1.85rem; color: #ffffff;">Assalamualaikum Warahmatullahi Wabarakatuh</h2>
-        <p class="mt-3 px-3 m-0 opacity-75" style="font-size: 0.95rem; line-height: 1.5;">
+    <div class="py-2 px-3 mb-4" data-aos="fade-down" data-aos-duration="1500">
+        <h2 class="font-arabic m-0" style="font-size: 2rem; color: var(--pria-gold);">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+        <h2 class="font-esthetic mt-3 m-0" style="font-size: 1.8rem; color: #ffffff;">Assalamualaikum Warahmatullahi Wabarakatuh</h2>
+        <p class="mt-3 px-3 m-0 opacity-75 mx-auto" style="font-size: 0.9rem; line-height: 1.7; max-width: 500px;">
             Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i untuk berkenan menghadiri acara pernikahan kami:
         </p>
     </div>
 
     <div class="pb-2">
-        <div class="position-relative my-4">
-            <div class="position-absolute" style="top: -10%; right: 12%; z-index: 1;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#c5a059" class="opacity-25" viewBox="0 0 16 16">
+        <div class="position-relative my-5">
+            <div class="position-absolute animate-love" style="top: -15%; right: 15%; z-index: 1;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--pria-gold)" class="opacity-25" viewBox="0 0 16 16">
                     <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
                 </svg>
             </div>
 
-            <div data-aos="fade-up" data-aos-duration="1200">
-                <img src="./assets/images/revin.webp" alt="Revin Nazif Al Fayed" onclick="undangan.guest.modal(this)" 
-                     class="rounded-circle border border-3 shadow-lg my-3 mx-auto cursor-pointer" 
-                     style="width: 145px; height: 145px; object-fit: cover; border-color: #c5a059 !important;">
+            <div data-aos="fade-right" data-aos-duration="1200">
+                <div class="mx-auto mb-4 position-relative" style="width: 150px; height: 150px;">
+                    <div class="pulse-gold position-absolute top-50 start-50 translate-middle rounded-circle" style="width: 150px; height: 150px; border: 1px solid var(--pria-gold-soft);"></div>
+                    <img src="./assets/images/revin.webp" alt="Revin Nazif Al Fayed" onclick="undangan.guest.modal(this)" 
+                         class="rounded-circle shadow-lg cursor-pointer position-relative" 
+                         style="width: 135px; height: 135px; object-fit: cover; border: 3px solid var(--pria-gold); z-index: 2;">
+                </div>
                 
-                <h2 class="font-esthetic m-0" style="font-size: 1.8rem; color: #c5a059; letter-spacing: 1px;">Revin Nazif Al Fayed</h2>
-                <p class="mt-2 mb-1 fw-light" style="font-size: 1rem; letter-spacing: 0.5px; opacity: 0.9;">Putra Pertama dari</p>
-                <p class="mb-0 fw-bold" style="font-size: 1.05rem;">Bapak M. Syafi'i</p>
-                <p class="my-1 opacity-50" style="font-size: 0.8rem;">&</p>
-                <p class="mb-0 fw-bold" style="font-size: 1.05rem;">Ibu Risnawati, S.Pd.SD.</p>
+                <h2 class="font-esthetic m-0" style="font-size: 2rem; color: var(--pria-gold); letter-spacing: 1px;">Revin Nazif Al Fayed</h2>
+                <p class="mt-2 mb-1 fw-light opacity-75" style="font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase;">Putra Pertama dari</p>
+                <div class="parent-info">
+                    <p class="mb-0 fw-bold" style="font-size: 1.05rem; letter-spacing: 0.5px;">Bapak M. Syafi'i</p>
+                    <p class="my-0 opacity-50" style="font-size: 0.8rem;">&</p>
+                    <p class="mb-0 fw-bold" style="font-size: 1.05rem; letter-spacing: 0.5px;">Ibu Risnawati, S.Pd.SD.</p>
+                </div>
             </div>
         </div>
 
-        <h2 class="font-esthetic my-4" style="font-size: 3.5rem; color: #c5a059; opacity: 0.7;">&</h2>
+        <h2 class="font-esthetic my-2 animate-love" style="font-size: 3rem; color: var(--pria-gold); opacity: 0.6;">&</h2>
 
-        <div class="position-relative my-4">
-            <div class="position-absolute" style="top: -10%; left: 12%; z-index: 1;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#c5a059" class="opacity-25" viewBox="0 0 16 16">
+        <div class="position-relative my-5">
+            <div class="position-absolute animate-love" style="top: -15%; left: 15%; z-index: 1;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="var(--pria-gold)" class="opacity-25" viewBox="0 0 16 16">
                     <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
                 </svg>
             </div>
 
-            <div data-aos="fade-up" data-aos-duration="1200">
-                <img src="./assets/images/roza.webp" alt="Roza Misalia" onclick="undangan.guest.modal(this)" 
-                     class="rounded-circle border border-3 shadow-lg my-3 mx-auto cursor-pointer" 
-                     style="width: 145px; height: 145px; object-fit: cover; border-color: #c5a059 !important;">
+            <div data-aos="fade-left" data-aos-duration="1200">
+                <div class="mx-auto mb-4 position-relative" style="width: 150px; height: 150px;">
+                    <div class="pulse-gold position-absolute top-50 start-50 translate-middle rounded-circle" style="width: 150px; height: 150px; border: 1px solid var(--pria-gold-soft);"></div>
+                    <img src="./assets/images/roza.webp" alt="Roza Misalia" onclick="undangan.guest.modal(this)" 
+                         class="rounded-circle shadow-lg cursor-pointer position-relative" 
+                         style="width: 135px; height: 135px; object-fit: cover; border: 3px solid var(--pria-gold); z-index: 2;">
+                </div>
                 
-                <h2 class="font-esthetic m-0" style="font-size: 1.8rem; color: #c5a059; letter-spacing: 1px;">Ns. Roza Misalia, S.Kep.</h2>
-                <p class="mt-2 mb-1 fw-light" style="font-size: 1rem; letter-spacing: 0.5px; opacity: 0.9;">Putri Ketiga dari</p>
-                <p class="mb-0 fw-bold" style="font-size: 1.05rem;">Bapak H. M. Ali Akbar, S.Pd.</p>
-                <p class="my-1 opacity-50" style="font-size: 0.8rem;">&</p>
-                <p class="mb-0 fw-bold" style="font-size: 1.05rem;">Ibu Hj. Misnah, S.Pd.</p>
+                <h2 class="font-esthetic m-0" style="font-size: 2rem; color: var(--pria-gold); letter-spacing: 1px;">Ns. Roza Misalia, S.Kep.</h2>
+                <p class="mt-2 mb-1 fw-light opacity-75" style="font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase;">Putri Ketiga dari</p>
+                <div class="parent-info">
+                    <p class="mb-0 fw-bold" style="font-size: 1.05rem; letter-spacing: 0.5px;">Bapak H. M. Ali Akbar, S.Pd.</p>
+                    <p class="my-0 opacity-50" style="font-size: 0.8rem;">&</p>
+                    <p class="mb-0 fw-bold" style="font-size: 1.05rem; letter-spacing: 0.5px;">Ibu Hj. Misnah, S.Pd.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 
                 <!-- Wave Separator -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0e1720" fill-opacity="1" d="M0,128L48,149.3C96,171,192,213,288,202.7C384,192,480,128,576,101.3C672,75,768,85,864,112C960,139,1056,181,1152,170.7C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
