@@ -366,27 +366,31 @@
                 </div>
             </div>
 
-            <div class="position-relative mt-2">
-                <div class="position-absolute d-flex justify-content-center align-items-center top-0 start-0 w-100 h-100 z-3" 
-                     id="overlay-story-btn"
-                     style="background: linear-gradient(to bottom, transparent, rgba(15, 23, 32, 0.9)); border-radius: 15px;">
-                    <button class="btn rounded-pill px-4 py-2" 
-                            onclick="undangan.guest.showStory(this.parentNode); document.getElementById('overlay-story-btn').style.display='none';"
-                            style="background: var(--pria-gold); color: #0f1720; font-weight: 700; font-size: 0.8rem; letter-spacing: 1px;">
-                        <i class="fa-solid fa-heart fa-bounce me-2"></i>BACA KISAH KAMI
-                    </button>
-                </div>
+           <div class="position-relative mt-2" style="z-index: 10;">
+    <div class="position-absolute d-flex justify-content-center align-items-center top-0 start-0 w-100 h-100" 
+         id="overlay-story-btn"
+         style="z-index: 20; background: linear-gradient(to bottom, transparent, rgba(15, 23, 32, 0.95)); border-radius: 15px;">
+        <button class="btn rounded-pill px-4 py-2" 
+                onclick="this.parentElement.style.display='none';" 
+                style="background: var(--pria-gold); color: #0f1720; font-weight: 700; font-size: 0.8rem; letter-spacing: 1px; pointer-events: auto;">
+            <i class="fa-solid fa-heart fa-bounce me-2"></i>BACA KISAH KAMI
+        </button>
+    </div>
 
-                <div class="overflow-y-scroll overflow-x-hidden p-3 with-scrollbar" 
-                     style="height: 18rem; scroll-behavior: smooth;">
-                    
-                    <div class="row mb-4" data-aos="fade-right">
-                        <div class="col-auto position-relative">
-                            <div class="d-flex justify-content-center align-items-center rounded-circle z-1 position-relative" 
-                                 style="width: 2.2rem; height: 2.2rem; background: var(--pria-gold); color: #000; font-weight: 800; font-size: 0.9rem;">1</div>
-                            <div class="position-absolute top-0 start-50 translate-middle-x h-100" 
-                                 style="width: 1px; background: rgba(197, 160, 89, 0.3); z-index: 0;"></div>
-                        </div>
+    <div class="overflow-y-scroll p-3" 
+         style="height: 18rem; scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none;">
+        
+        <style>
+            #story .overflow-y-scroll::-webkit-scrollbar { display: none; }
+        </style>
+
+        <div class="row mb-4">
+            <div class="col-auto position-relative">
+                <div class="d-flex justify-content-center align-items-center rounded-circle z-1 position-relative" 
+                     style="width: 2.2rem; height: 2.2rem; background: var(--pria-gold); color: #000; font-weight: 800;">1</div>
+                <div class="position-absolute top-0 start-50 translate-middle-x h-100" 
+                     style="width: 1px; background: rgba(197, 160, 89, 0.3);"></div>
+            </div>
                         <div class="col ps-0">
                             <h6 class="fw-bold mb-1" style="color: var(--pria-gold); letter-spacing: 0.5px;">Awal Pertemuan</h6>
                             <p class="small mb-0 opacity-75" style="line-height: 1.6;">
