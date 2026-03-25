@@ -156,3 +156,55 @@ p, span, h1, h2, h3, h4, h5, h6, label, .container {
     background: linear-gradient(to right, #c5a059, #f1d59f) !important;
     border-radius: 10px;
 }
+
+/* =======================================================================
+   [6] GUESTBOOK AUTOMATIC STYLING (Agar teks otomatis tidak berantakan)
+   ======================================================================= */
+
+/* Targetkan setiap blok ucapan yang muncul otomatis */
+#ucapan-container > div {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-left: 3px solid var(--gold-primary) !important;
+    padding: 15px !important;
+    margin-bottom: 15px !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    transition: transform 0.3s ease;
+}
+
+#ucapan-container > div:hover {
+    transform: scale(1.01);
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Targetkan Nama Tamu (h6) */
+#ucapan-container h6 {
+    color: var(--gold-primary) !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    margin-bottom: 5px !important;
+    display: block !important;
+}
+
+/* Targetkan Isi Ucapan (p) */
+#ucapan-container p {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    font-style: italic !important;
+    background: transparent !important; /* Memastikan tidak ada kotak hitam di belakang teks */
+}
+
+/* Tambahan: Styling Scrollbar agar lebih halus */
+.with-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.with-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.with-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--gold-primary);
+    border-radius: 10px;
+}
+
