@@ -460,41 +460,44 @@
     
 
 <!-- Wedding Date -->
-<section class="bg-dark py-5" id="wedding-date-section" style="background-color: #0c0c0c;">
+<section class="py-5 overflow-hidden" id="wedding-date-section" style="background-color: var(--navy-deep);">
     <div class="container text-center text-light px-3">
-        <h2 class="font-esthetic mb-4" style="font-size: clamp(2.2rem, 5vw, 2.8rem); color: #c5a059; letter-spacing: 1px; line-height: 1.2;">
-            Momen Bahagia
-        </h2>
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="font-esthetic mb-4" style="font-size: 3rem; color: var(--gold-primary); text-shadow: 2px 4px 10px rgba(0,0,0,0.5);">
+                Momen Bahagia
+            </h2>
+        </div>
 
-        <div class="countdown-wrapper border shadow-lg py-3 px-2 mb-4 mx-auto rounded-4"
-            style="max-width: 550px; width: 100%; border-color: rgba(197, 160, 89, 0.25) !important; background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(5px);">
+        <div class="countdown-wrapper shadow-lg py-4 px-2 mb-5 mx-auto rounded-5"
+            data-aos="zoom-in" data-aos-duration="1200"
+            style="max-width: 550px; width: 100%; border: 1px solid rgba(197, 160, 89, 0.3); background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px);">
             <div class="row g-0 align-items-center text-center">
 
                 <div class="col-3">
                     <div class="d-flex flex-column py-2">
-                        <h3 class="m-0 fw-bold" id="day" style="color: #c5a059; font-size: clamp(1.5rem, 4.5vw, 2rem); line-height: 1;">0</h3>
-                        <small class="text-uppercase mt-2" style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">Hari</small>
+                        <h3 class="m-0 fw-bold" id="day" style="color: var(--gold-primary); font-size: 2.2rem; line-height: 1; font-family: 'Plus Jakarta Sans', sans-serif;">0</h3>
+                        <small class="text-uppercase mt-2 fw-bold" style="font-size: 0.6rem; letter-spacing: 2px; color: #ffffff; opacity: 0.5;">Hari</small>
                     </div>
                 </div>
 
-                <div class="col-3 border-start" style="border-color: rgba(197, 160, 89, 0.15) !important;">
+                <div class="col-3 border-start border-secondary opacity-75">
                     <div class="d-flex flex-column py-2">
-                        <h3 class="m-0 fw-bold" id="hour" style="font-size: clamp(1.5rem, 4.5vw, 2rem); line-height: 1; color: #c5a059;">0</h3>
-                        <small class="text-uppercase mt-2" style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">Jam</small>
+                        <h3 class="m-0 fw-bold" id="hour" style="font-size: 2.2rem; line-height: 1; color: var(--gold-primary); font-family: 'Plus Jakarta Sans', sans-serif;">0</h3>
+                        <small class="text-uppercase mt-2 fw-bold" style="font-size: 0.6rem; letter-spacing: 2px; color: #ffffff; opacity: 0.5;">Jam</small>
                     </div>
                 </div>
 
-                <div class="col-3 border-start" style="border-color: rgba(197, 160, 89, 0.15) !important;">
+                <div class="col-3 border-start border-secondary opacity-75">
                     <div class="d-flex flex-column py-2">
-                        <h3 class="m-0 fw-bold" id="minute" style="font-size: clamp(1.5rem, 4.5vw, 2rem); line-height: 1; color: #c5a059;">0</h3>
-                        <small class="text-uppercase mt-2" style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">Menit</small>
+                        <h3 class="m-0 fw-bold" id="minute" style="font-size: 2.2rem; line-height: 1; color: var(--gold-primary); font-family: 'Plus Jakarta Sans', sans-serif;">0</h3>
+                        <small class="text-uppercase mt-2 fw-bold" style="font-size: 0.6rem; letter-spacing: 2px; color: #ffffff; opacity: 0.5;">Menit</small>
                     </div>
                 </div>
 
-                <div class="col-3 border-start" style="border-color: rgba(197, 160, 89, 0.15) !important;">
+                <div class="col-3 border-start border-secondary opacity-75">
                     <div class="d-flex flex-column py-2">
-                        <h3 class="m-0 fw-bold" id="second" style="font-size: clamp(1.5rem, 4.5vw, 2rem); line-height: 1; color: #c5a059;">0</h3>
-                        <small class="text-uppercase mt-2" style="font-size: 0.65rem; letter-spacing: 2px; color: rgba(255,255,255,0.5);">Detik</small>
+                        <h3 class="m-0 fw-bold" id="second" style="font-size: 2.2rem; line-height: 1; color: var(--gold-primary); font-family: 'Plus Jakarta Sans', sans-serif;">0</h3>
+                        <small class="text-uppercase mt-2 fw-bold" style="font-size: 0.6rem; letter-spacing: 2px; color: #ffffff; opacity: 0.5;">Detik</small>
                     </div>
                 </div>
             </div>
@@ -502,54 +505,48 @@
     </div>
 </section>
 
-<section id="agenda" class="bg-dark text-light" style="background-color: #0c0c0c; padding: 0 20px 80px;">
-    <div class="container text-center px-3">
-        <p class="opening-text mx-auto mb-5" style="
-            max-width: 600px; 
-            color: rgba(255, 255, 255, 0.6); 
-            font-size: 0.9rem; 
-            line-height: 1.8; 
-            font-style: italic;
-        ">
-            Dengan memohon rahmat dan rida Allah Subhanahu Wa Ta'ala, <br class="d-none d-md-block">
-            insyaAllah kami bermaksud menyelenggarakan acara:
+<section id="agenda" class="pb-5 text-light" style="background-color: var(--navy-deep); padding-top: 20px;">
+    <div class="container text-center px-4">
+        <p class="opening-text mx-auto mb-5 text-white-50" style="max-width: 600px; font-size: 0.95rem; line-height: 1.8; font-style: italic; font-family: 'Plus Jakarta Sans', sans-serif;">
+            Dengan memohon rahmat dan rida Allah Subhanahu Wa Ta'ala, insyaAllah kami bermaksud menyelenggarakan acara:
         </p>
 
         <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-8">
-                <div class="agenda-card p-4 p-md-5 rounded-4 shadow-lg mx-auto"
-                    style="
-                        background: #161616; 
-                        border: 1px solid rgba(197, 160, 89, 0.2); 
-                        max-width: 600px; 
-                        width: 100%;
-                        transition: transform 0.3s ease;
-                    ">
+            <div class="col-12 col-md-8">
+                <div class="agenda-card p-4 p-md-5 rounded-5 shadow-lg mx-auto position-relative overflow-hidden"
+                    data-aos="fade-up" data-aos-duration="1200"
+                    style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(197, 160, 89, 0.25); max-width: 600px; width: 100%; backdrop-filter: blur(15px);">
+                    
+                    <div class="position-absolute opacity-25" style="top: -10px; right: -10px; transform: rotate(45deg);">
+                         <i class="fa-solid fa-crown" style="font-size: 4rem; color: var(--gold-primary);"></i>
+                    </div>
 
-                    <div class="agenda-header fw-bold text-uppercase mb-4" style="color: #c5a059; font-size: 0.75rem; letter-spacing: 3px; opacity: 0.8;">
-                        Acara Mempelai Pria
+                    <div class="agenda-header fw-bold text-uppercase mb-4" style="color: var(--gold-primary); font-size: 0.8rem; letter-spacing: 4px; font-family: 'Plus Jakarta Sans', sans-serif;">
+                        RESEPSI KEDUA
                     </div>
 
                     <div class="row align-items-start justify-content-center">
                         <div class="col-12">
-                            <h3 class="font-esthetic" style="font-size: 2.8rem; color: #c5a059; margin-bottom: 8px;">Ngunduh Mantu</h3>
-                            <p class="fw-bold mb-1" style="font-size: 1.2rem; color: #fff;">Senin, 06 April 2026</p>
-                            <p style="font-size: 0.95rem; color: rgba(255,255,255,0.5);">10.00 WIB - Selesai</p>
+                            <h3 class="font-esthetic mb-3" style="font-size: 3.5rem; color: var(--gold-primary); text-shadow: 2px 2px 5px rgba(0,0,0,0.3);">Ngunduh Mantu</h3>
+                            <p class="fw-bold mb-1" style="font-size: 1.3rem; color: #ffffff; letter-spacing: 1px;">Senin, 06 April 2026</p>
+                            <p class="fw-medium text-white-50" style="font-size: 1rem; letter-spacing: 1px;">Pukul 10.00 WIB - Selesai</p>
                         </div>
                     </div>
 
-                    <div class="location-section pt-5 mt-4" style="border-top: 1px solid rgba(255,255,255,0.05);">
-                        <i class="fas fa-location-dot mb-3" style="color: #c5a059; font-size: 1.3rem;"></i>
-                        <p class="address mx-auto" style="font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.7; max-width: 450px;">
-                            <strong style="color: #fff; display: block; margin-bottom: 6px; font-size: 1.05rem;">Kediaman Mempelai Pria</strong>
-                            Jalan Hang Lekir No. 324 Desa Sejangat, Kec. Bukit Batu, Bengkalis, Riau 28761.
+                    <div class="location-section pt-5 mt-4" style="border-top: 1px solid rgba(197, 160, 89, 0.2);">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-location-dot" style="color: var(--gold-primary); font-size: 1.8rem; filter: drop-shadow(0 0 10px rgba(197,160,89,0.5));"></i>
+                        </div>
+                        <p class="address mx-auto" style="font-size: 0.95rem; color: #ffffff; line-height: 1.8; max-width: 450px; font-family: 'Plus Jakarta Sans', sans-serif;">
+                            <strong style="color: var(--gold-primary); display: block; margin-bottom: 8px; font-size: 1.15rem; text-transform: uppercase; letter-spacing: 1px;">Kediaman Mempelai Pria</strong>
+                            Jalan Hang Lekir No. 324 Desa Sejangat, <br> Kec. Bukit Batu, Bengkalis, Riau 28761.
                         </p>
                     </div>
 
-                    <a href="https://maps.app.goo.gl/YqtnrhpFbCghBHTo7?g_st=iw" target="_blank"
-                        class="btn rounded-pill py-3 mt-4 fw-bold shadow-sm"
-                        style="background: #c5a059; color: #1a1a1a; font-size: 0.85rem; border: none; letter-spacing: 1px; width: 80%; max-width: 300px;">
-                        <i class="fas fa-map-marker-alt me-2"></i> PETUNJUK LOKASI
+                    <a href="https://maps.app.goo.gl/YourGoogleMapsLinkHere" target="_blank"
+                        class="btn btn-premium rounded-pill py-3 px-5 mt-4 fw-bold shadow-lg text-decoration-none d-inline-block"
+                        style="font-size: 0.85rem; letter-spacing: 2px; min-width: 250px;">
+                        <i class="fa-solid fa-map-location-dot me-2"></i> LIHAT LOKASI MAPS
                     </a>
                 </div>
             </div>
